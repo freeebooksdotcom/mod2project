@@ -30,7 +30,13 @@ Since our data is not normally distributed we decided to take on the route of co
 While using different methods like k-best, T score or lasso, we found that K-best and T score did not fit our model.The model tended to be over fit, but we were able to find the best option which would result in using Lasso for the final model.
 
 We wanted to compare if there could be a better model to predict our data. We used Poisson distribution to calculate a model that could benefit from variables being categorical. While the results of using linear regression gave us some insight, Using Poisson distribution gave the most accurate results. This conclusion comes from comparing our original data with the predictive model as seen below.
-![Image](images/poisson_error.png?raw=true)
+![Image](images/poisson_error250.png?raw=true)
+
+we realized that the outliers shown above affected negatively the model and investigating showed that pitbulls who have been longer that 150 days were skewing our predictions.
+![Image](images/pitbull_coefficients.png?raw=true)
+
+After removing said outliers, we were able to have the most accurate model.
+![Image](images/poisson_error250_pitbull.png?raw=true)
 
 
 ### Findings
