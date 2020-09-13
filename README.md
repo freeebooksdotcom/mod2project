@@ -18,16 +18,21 @@ The goal of this project is to assist the Austin Animal Shelter in predicting th
 ### The Data
 Whilst the data we had was a good base, most of the data needed to complement our data to add more continuous variables to better create a model. Most of the values on our data were categorical and in string form. We decided to proceed in making several dummy variables such as in the case of intakes per month. We created bins for the data that could be binned such as color or breed, by doing so, those string variables could have an impact in our modelling process.
 
-We were able to discover whilst analyzing our data by analyzing our data we found that dogs tend to be adopted more during the weekend thank any other day. 
+We were able to discover whilst analyzing our data by analyzing our data we found that dogs tend to be adopted more during the weekend than any other day. 
 ![Image](images/weekly_adoptions.png?raw=true)
 
-Also were able to discover through data cleaning that most dogs aside from being stray dogs, were mostly surrendered by their owners, which could give us the insight of what the center can expect their intakes to be.
-![Image](images/intake_reason.png?raw=true)
+Also we were able to discover through data cleaning that most dogs aside from being stray dogs, were mostly surrendered by their owners, which could give us the insight of what the center can expect their intakes to be.
+                    ![Image](images/intake_reason.png?raw=true)
 
 
 ### Modeling
-Since our data is not normally distributed we decided to take on the rout of comparing what could best fit our predictive models. We started wiht linear regression. Using linear regression and creating various features to accomodate the needs for linear regression our model turned out with a quite low R2. Using this we kept feature engeniering.
+Since our data is not normally distributed we decided to take on the route of comparing what could best fit our predictive models. We started with linear regression. Using linear regression and creating various features to accomodate the needs for linear regression our model turned out with a quite low R2. Using this we kept feature engineering.
 While using different methods like k-best, T score or lasso, we found that K-best and T score did not fit our model.The model tended to be over fit, but we were able to find the best option which would result in using Lasso for the final model.
+
+We wanted to compare if there could be a better model to predict our data. We used Poisson distribution to calculate a model that could benefit from variables being categorical. While the results of using linear regression gave us some insight, Using Poisson distribution gave the most accurate results. This conclusion comes from comparing our original data with the predictive model as seen below.
+![Image](images/poisson_error.png?raw=true)
 
 
 ### Findings
+
+
