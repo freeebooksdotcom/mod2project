@@ -33,7 +33,7 @@ We wanted to compare if there could be a better model to predict our data. We us
 ![Image](images/poisson_error250.png?raw=true)
 
 we realized that the outliers shown above affected negatively the model and investigating showed that pitbulls who have been longer that 150 days were skewing our predictions.
-![Image](images/pitbull_coefficients.png?raw=true)
+![Image](images/value_count_breeds.png?raw=true)
 
 After removing said outliers, we were able to have the most accurate model.
 ![Image](images/poisson_error250_pitbull.png?raw=true)
