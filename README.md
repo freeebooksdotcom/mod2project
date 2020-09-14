@@ -27,7 +27,6 @@ We discovered through data cleaning that most dogs aside from being stray dogs, 
 
 ### Modeling
 Since our data is not normally distributed we decided to also explore using a Poisson distribution for our predictive model in addition to our Linear Regressions. 
-![Image](images/target_distribution.png?raw=true)
 
 We started with linear regression. Using linear regression without polynomial interaction our model turned out with a quite low R2. 
 
